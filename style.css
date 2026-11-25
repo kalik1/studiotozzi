@@ -211,7 +211,7 @@ nav a[aria-current="page"] {
   .ethics-page .service-index ul { display: block; }
 }
 
-.bulletins h1 { margin-bottom: .7em; }
+.bulletins-page .reference-cover { background: #303e50; }
 .bulletins section { display: grid; grid-template-columns: minmax(75px,.45fr) 1fr; gap: 5%; padding-block: 22px; border-top: 1px solid var(--rule); }
 .bulletins h2 { color: var(--wine); font-size: clamp(1.8rem,3.4vw,3.7rem); }
 .bulletins ul { margin: 0; padding: 0; list-style: none; }
