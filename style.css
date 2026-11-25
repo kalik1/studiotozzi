@@ -157,3 +157,38 @@ nav a[aria-current="page"] {
   nav a { padding-block: 10px; }
 }
 .directory { border-top: 1px solid var(--rule); }
+
+.overview .services { margin: 30px 0; }
+.overview h3 a { text-decoration: underline; text-decoration-color: #c9b4a2; text-underline-offset: .2em; text-decoration-thickness: 1px; }
+.overview h3 a:hover { color: var(--wine); }
+.service-button { display: inline-block; background: var(--wine); color: white; padding: 13px 21px; border-radius: 2px; }
+.service-cover { position: relative; isolation: isolate; overflow: hidden; color: var(--paper); background: #4a2b30; }
+.service-cover::before { content: ""; position: absolute; z-index: -1; inset: 0 0 0 48%; background: linear-gradient(90deg,#4a2b30,transparent 34%),url("assets/studio.webp") 78% 68% / cover; }
+.service-cover .wrap { padding-block: clamp(44px,5.8vw,90px); }
+.service-cover p { max-width: min(45%,42ch); margin-top: 23px; color: #f0e5dc; font-size: 1.075rem; }
+.service-guide { display: grid; grid-template-columns: minmax(190px,.65fr) minmax(0,1.5fr); gap: 8%; }
+.service-index { align-self: start; position: sticky; top: 2rem; }
+.service-index h2 { font: 1.35rem var(--display); margin-bottom: 16px; }
+.service-index ul { list-style: none; padding: 0; }
+.service-index li { border-top: 1px solid var(--rule); }
+.service-index a { display: block; padding: 10px 0; color: var(--wine); }
+.service-entries section { padding-bottom: 36px; margin-bottom: 36px; border-bottom: 1px solid var(--rule); scroll-margin-top: 24px; }
+.service-entries h2 { font-size: clamp(2rem,3.25vw,3.6rem); }
+.service-entries p { margin: 16px 0; max-width: 65ch; color: var(--muted); }
+.service-entries ul { padding-left: 1.2em; }
+.service-entries li { padding: 4px 0 4px 3px; }
+.service-entries li::marker { color: var(--brass); }
+@media (min-width: 701px) and (max-width: 960px) {
+  .overview .services { grid-template-columns: repeat(3,1fr); }
+}
+@media (max-width: 700px) {
+  .service-cover::before { inset: 0; opacity: .18; }
+  .service-cover p { max-width: 40ch; }
+  .service-guide { grid-template-columns: 1fr; gap: 40px; }
+  .service-index { position: static; }
+  .service-index ul { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 14px; }
+  .overview .services { grid-template-columns: 1fr; }
+}
+@media (max-height: 540px) {
+  .service-index { position: static; }
+}
