@@ -210,3 +210,10 @@ nav a[aria-current="page"] {
   .directory-groups { grid-template-columns: 1fr; gap: 35px; }
   .ethics-page .service-index ul { display: block; }
 }
+
+.bulletins h1 { margin-bottom: .7em; }
+.bulletins section { display: grid; grid-template-columns: minmax(75px,.45fr) 1fr; gap: 5%; padding-block: 22px; border-top: 1px solid var(--rule); }
+.bulletins h2 { color: var(--wine); font-size: clamp(1.8rem,3.4vw,3.7rem); }
+.bulletins ul { margin: 0; padding: 0; list-style: none; }
+.bulletins a { display: block; padding: 10px 0; text-decoration: underline; text-decoration-color: #c9b4a2; text-underline-offset: .22em; }
+.bulletins li + li { border-top: 1px solid var(--rule); }
